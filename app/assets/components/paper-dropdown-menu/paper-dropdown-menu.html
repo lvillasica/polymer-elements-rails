@@ -130,13 +130,11 @@ respectively.
       vertical-offset="[[_computeMenuVerticalOffset(noLabelFloat)]]"
       no-animations="[[noAnimations]]"
       on-iron-select="_onIronSelect"
-      disabled="{{isDisabled}}"
       opened="{{opened}}">
       <div class="dropdown-trigger">
         <paper-ripple></paper-ripple>
         <paper-input
           readonly
-          disabled="{{isDisabled}}"
           value="[[selectedItemLabel]]"
           placeholder="[[placeholder]]"
           always-float-label="[[alwaysFloatLabel]]"
@@ -216,14 +214,6 @@ respectively.
         opened: {
           type: Boolean,
           notify: true,
-          value: false
-        },
-
-        /**
-         * True if the dropdown is disabled. Otherwise, false.
-         */
-        isDisabled: {
-          type: Boolean,
           value: false
         },
 
